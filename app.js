@@ -9,7 +9,7 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGO_URL);
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: 'https://tourmaline-cendol-ebd39b.netlify.app', credentials: true}));
 
 // Routes
 app.use('/api', sensorRoutes);
