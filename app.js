@@ -6,7 +6,7 @@ const sensorRoutes = require('./routes/sensorRoutes');
 const app = express();
 require('dotenv').config();
 // MongoDB connection
-mongoose.connect(process.env,MONGO_URL);
+mongoose.connect(process.env.MONGO_URL);
 
 app.use(bodyParser.json());
 app.use(cors());
