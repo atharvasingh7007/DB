@@ -9,7 +9,7 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGO_URL);
 
 app.use(bodyParser.json());
-app.use(cors({ origin: 'https://lively-nasturtium-acca97.netlify.app/', credentials: true}));
+app.use(cors({ origin: 'https://lively-nasturtium-acca97.netlify.app', credentials: true}));
 
 // Routes
 app.use('/api', sensorRoutes);
